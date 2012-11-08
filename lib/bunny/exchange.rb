@@ -152,8 +152,7 @@ module Bunny
                                              :delivery_mode => delivery_mode,
                                              :reply_to => reply_to,
                                              :correlation_id => correlation_id,
-                                             :user_id => user_id,
-                                             :priority      => 0
+                                             :user_id => user_id
                                            }.merge(opts)
                                            )
       out << Qrack::Transport::Body.new(data)
