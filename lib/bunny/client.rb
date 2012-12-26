@@ -139,6 +139,7 @@ module Bunny
 
       case
       when frame.is_a?(Qrack::Transport::Heartbeat)
+        send_heartbeat
         next_frame(opts)
       when frame.nil?
         frame
