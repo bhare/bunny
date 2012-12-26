@@ -278,6 +278,7 @@ module Bunny
     end
 
     def send_heartbeat
+      puts "sending heartbeat"
       # Create a new heartbeat frame
       hb = Qrack::Transport::Heartbeat.new('')
       # Channel 0 must be used
