@@ -203,6 +203,7 @@ module Qrack
 
       begin
         # Attempt to connect.
+        puts "#{Time.now} : connect timeout is #{@connect_timeout}"
         @socket = Bunny::Timer::timeout(@connect_timeout, ConnectionTimeout) do
           TCPSocket.new(host, port)
         end
